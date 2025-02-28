@@ -17,6 +17,7 @@ function runDemo() {
   dispatcher.registerService("EMAIL", new EmailNotificationService());
   dispatcher.registerService("PUSH", new PushNotificationService());
 
+  // Subscribe to any triggered notification if desired, from anywhere in the app code.
   // dispatcher.onNotificationDispatched((notification) => {
   //   console.log('Notification dispatched', notification)
   // });
