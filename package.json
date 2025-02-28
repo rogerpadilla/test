@@ -1,0 +1,16 @@
+{
+  "name": "helios-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx demo.ts"
+  },
+  "author": "Roger Padilla",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "tsx": "^4.19.3"
+  }
+}
