@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+.yarn
+yarn-error.log
+tsconfig.tsbuildinfo
+dist
+coverage
+data
+.pnp.js
+.yarnrc.yml
+*.tsbuildinfo
