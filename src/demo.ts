@@ -22,6 +22,7 @@ function runDemo() {
     dispatcher
   );
 
+  // it might be good to allow partial updates of preferences. it should be easy with a merge operation in memory to integrate new and old values.
   userRepository.updateUserPreferences({
     userId: 2,
     enabledCategories: { GAME_EVENTS: true },
