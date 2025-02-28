@@ -3,6 +3,7 @@ import { NotificationChannel, NotificationMessage, NotificationService, UserRepo
 // Multi-channel notification dispatcher
 export class NotificationDispatcher {
   private readonly services = new Map<string, NotificationService>();
+  private readonly callbacks: ((notification: NotificationMessage) => void)[] = [];
 
   constructor(private readonly userRepository: UserRepository) { }
 
@@ -18,5 +19,13 @@ export class NotificationDispatcher {
       const service = this.services.get(channelName);
       service?.sendNotification(notification);
     }
+
+    for (const callback of this.callbacks) {
+      callback.apply(this, [notification]);
+    }
+  }
+
+  onNotificationDispatched(callback: (notification: NotificationMessage) => void): void {
+    this.callbacks.push(callback)
   }
 }

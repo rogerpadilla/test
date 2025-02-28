@@ -1,3 +1,4 @@
+import { EventEmitter } from "events";
 import { notificationCategoryMap } from "../shared/const";
 import { UserRepository, NotificationEvent, NotificationMessage } from "../shared/model";
 import { NotificationDispatcher } from "./notificationDispatcher";

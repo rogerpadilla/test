@@ -17,6 +17,10 @@ function runDemo() {
   dispatcher.registerService("EMAIL", new EmailNotificationService());
   dispatcher.registerService("PUSH", new PushNotificationService());
 
+  // dispatcher.onNotificationDispatched((notification) => {
+  //   console.log('Notification dispatched', notification)
+  // });
+
   const notificationManager = new NotificationManager(
     userRepository,
     dispatcher
